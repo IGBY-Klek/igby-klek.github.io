@@ -6,15 +6,23 @@
 </head>
    <body>
 	   <style>
-        @font-face {
-            font-family: 'NotoAbCym';
-            src: url('./NotoAbCym.ttf') format('ttf');
-        }
+    @font-face {
+        font-family: 'NotoAbCym';
+        /* 1. 确保路径正确；2. 修正格式名称为 truetype */
+        src: url('NotoAbCym.ttf') format('truetype');
+        font-display: swap; /* 确保在字体加载前显示备用文字 */
+    }
 
-        body {
-            font-family: 'NotoAbCym', sans-serif;
-        }
-    </style>  <p style="font-size: 14px; font-family: noto-sans; font-color: #999999">    
+    body {
+        /* 确保 fallback 机制，如果自定义字体挂了，至少能看到基础文字 */
+        font-family: 'NotoAbCym', 'Noto Sans SC', sans-serif;
+    }
+    
+    /* 针对私有区字符的特殊调试样式 */
+    td, th {
+        font-family: 'NotoAbCym' !important;
+    }
+</style>  <p style="font-size: 14px; font-family: noto-sans; font-color: #999999">    
 		  <h1 style="font-family: sans-serif">
 	威尔士语元音附标转写方案</a>
 </h1>
