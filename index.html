@@ -10,7 +10,7 @@
         :root {
             --text-color: #333;
             --white-alpha: rgba(255, 255, 255, 0.7);
-            --theme-blue: #44cef6; /* 保留你原稿中的蓝色调作为点缀 */
+          
         }
 
         body, html {
@@ -20,19 +20,21 @@
             background-color: #f4f4f4;
         }
 
-        /* 背景：如果没有 sunset.jpg，会显示灰色背景 */
-        #web_bg {
+        /* 背景：如果没有这个图片，会显示灰色背景 */
+           #web_bg {
             position: fixed; width: 100%; height: 100%; z-index: -999;
-            background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+            background: url('./img/itung-ula.jpg') no-repeat center center;
             background-size: cover;
         }
 
+        /* 顶部封面：确保目录下有这张图 */
         header {
-            height: 40vh; /* 缩短了页头高度，更适合个人主页 */
-            background: var(--theme-blue);
+            height: 100vh;
+            background: url('./img/qk.jpg') no-repeat center center;
+            background-size: cover;
             display: flex; flex-direction: column;
             justify-content: center; align-items: center;
-            color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         nav {
