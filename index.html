@@ -1,33 +1,130 @@
 <!DOCTYPE html>
- <html>
-  <head>  
-<meta charset="UTF-8">
-<title>人间边缘界</title>
-</head>
-   <body>
-	   <div style="background: #44cef6; text-align: left; font-size: 150%; padding: 20px;">
-	   <p style="font-size: 12px; font-family: noto-sans; font-color: "blue">
-	   <a href=IGBYSvet>人间边缘界</a>
-   </p>
-<p style="font-size: 12px; font-family: noto-sans; font-color: "blue">
-	   <a href=KKS_Roll>胖胖小英雄战❤️败❤️记</a>
-   </p>	   
-<p style="font-size: 12px; font-family: noto-sans; font-color: "blue">
-	   <a href=Abucym>胡改威尔士语</a>
-   </p>	   
-	   </div>
-    <h1 style="font-family: sans-serif">
-	主页</a>
-</h1>
-    <p style="font-size: 16px; font-family: sans-serif">欢迎来到昌九的小木屋！<br>不着急走的话就先坐下来暖暖身子吧！<br><s>当然了如果你没意见的话做奇怪的事情也不是不行</s><br></p> 
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人间边缘界 - 昌九的小木屋</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    
+    <style>
+        :root {
+            --text-color: #333;
+            --white-alpha: rgba(255, 255, 255, 0.7);
+            --theme-blue: #44cef6; /* 保留你原稿中的蓝色调作为点缀 */
+        }
 
-	   <hr>
-	  <p style="font-size: 12px; font-family: sans-serif; font-color: #999999">2023-2026 Klekta 版权所无</p>
-   <p style="font-size: 12px; font-family: noto-sans; font-color: "blue">
-	   <a href="https://wiki.xdi8.top/">希顶维基</a>
-   </p>
-	    <p style="font-size: 12px; font-family: noto-serif; font-color: "blue">
-	  电子邮箱：Klekta@163.com
-   </p>
-   </body>
+        body, html {
+            margin: 0; padding: 0;
+            font-family: "noto-sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-color);
+            background-color: #f4f4f4;
+        }
+
+        /* 背景：如果没有 sunset.jpg，会显示灰色背景 */
+        #web_bg {
+            position: fixed; width: 100%; height: 100%; z-index: -999;
+            background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+            background-size: cover;
+        }
+
+        header {
+            height: 40vh; /* 缩短了页头高度，更适合个人主页 */
+            background: var(--theme-blue);
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            position: absolute; top: 0; width: 100%; padding: 20px;
+            display: flex; justify-content: space-between; box-sizing: border-box;
+        }
+
+        .nav-link { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        .nav-link:hover { border-bottom: 2px solid white; }
+
+        #site-title { font-size: 2.5rem; margin: 0; }
+
+        main {
+            max-width: 1100px; margin: -40px auto 40px; /* 向上偏移产生重叠感 */
+            display: flex; gap: 20px; padding: 0 20px;
+        }
+
+        /* 左侧内容区：存放你的导航链接 */
+        .recent-posts { flex: 2; }
+        .post-card {
+            background: var(--white-alpha);
+            padding: 25px; border-radius: 12px;
+            margin-bottom: 20px; backdrop-filter: blur(10px);
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .post-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.9); }
+        .post-card a { text-decoration: none; color: #007799; font-weight: bold; font-size: 1.2rem; }
+        
+        /* 侧边栏：存放欢迎词和联系方式 */
+        .aside-content { flex: 1; }
+        .card-info {
+            background: var(--white-alpha); padding: 20px;
+            border-radius: 12px; text-align: center; backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .welcome-text { text-align: left; font-size: 0.95rem; line-height: 1.6; color: #555; }
+        
+        footer { text-align: center; padding: 40px; color: #666; font-size: 0.8rem; }
+
+        @media (max-width: 768px) { main { flex-direction: column; margin-top: 20px; } }
+    </style>
+</head>
+<body>
+
+    <div id="web_bg"></div>
+
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a class="nav-link" href="#">人间边缘界</a>
+            </div>
+            <div class="nav-right">
+                <a class="nav-link" href="https://wiki.xdi8.top/"><i class="fas fa-book"></i> 希顶维基</a>
+            </div>
+        </nav>
+        <h1 id="site-title">主页</h1>
+    </header>
+
+    <main>
+        <div class="recent-posts">
+            <div class="post-card">
+                <a href="IGBYSvet"><i class="fas fa-link"></i> 人间边缘界</a>
+            </div>
+            <div class="post-card">
+                <a href="KKS_Roll"><i class="fas fa-shield-alt"></i> 胖胖小英雄战❤️败❤️记</a>
+            </div>
+            <div class="post-card">
+                <a href="Abucym"><i class="fas fa-language"></i> 胡改威尔士语</a>
+            </div>
+        </div>
+
+        <div class="aside-content">
+            <div class="card-info">
+                <div style="font-weight: bold; font-size: 1.2rem; margin-bottom: 15px;">昌九的小木屋</div>
+                <div class="welcome-text">
+                    欢迎来到昌九的小木屋！<br>
+                    不着急走的话就先坐下来暖暖身子吧！<br>
+                    <small style="color: #bbb;"><s>当然了如果你没意见的话做奇怪的事情也不是不行</s></small>
+                </div>
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+                <div style="font-size: 0.9rem; color: #666;">
+                    <i class="fas fa-envelope"></i> Klekta@163.com
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>2023-2026 Klekta 版权所无</p>
+    </footer>
+
+</body>
 </html>
