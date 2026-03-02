@@ -6,6 +6,11 @@
 * {
   box-sizing: border-box;
 }
+@font-face {
+      font-family: "HarmonyOS_Sans_SC_Regular.ttf";
+      src: url("NotoAbCym.ttf") format("truetype");
+      font-display: swap;
+    }
 
 body {
   margin: 0;
@@ -14,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--text-color);
-  font-family: "Noto Sans SC", "Segoe UI", sans-serif;
+  font-family: "HarmonyOS_Sans_SC_Regular", "Segoe UI", sans-serif;
 }
 
 #web_bg {
