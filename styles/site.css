@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--text-color);
-  font-family: "HarmonyOS_Sans_SC_Regular", "Segoe UI", sans-serif;
+  font-family: "HarmonyOS_Sans_SC_Regular",  sans-serif;
 }
 
 #web_bg {
